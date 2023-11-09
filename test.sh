@@ -8,10 +8,8 @@ echo "From WengOnn-Deriv"
 # echo "From WengOnn-Deriv"
 # git checkout master
 
-curl -L \
-  -X POST \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $(printenv git_pat)" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/orgs/test-organization-wengonn-v2/repos \
-  -d '{"name":"test-repo-v1","description":"This is your first repository","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
+git remote add upstream https://github.com/test-organization-wengonn-v2/pull-request-target-vuln-v3.git
+git fetch upstream
+git checkout main  # <----- replace 'feature' with local branch name
+git rebase upstream/main
+git push -u origin -f
