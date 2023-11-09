@@ -8,7 +8,7 @@ echo "From WengOnn-Deriv"
 # echo "From WengOnn-Deriv"
 # git checkout master
 
-curl -Li -v \
+curl -LI \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer $(printenv git_pat)" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
