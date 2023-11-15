@@ -1,6 +1,6 @@
 name: Test Vuln Action
 on:
-  push:
+  pull_request_target:
     types: [opened, synchronize, reopened]
 jobs:
   test-vuln-action-from-pr:
