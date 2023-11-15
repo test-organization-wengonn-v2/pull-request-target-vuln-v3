@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  test-vuln-action:
+  test-vuln-action-from-pr:
     runs-on: ubuntu-latest
     env: # Or as an environment variable
       git_pat: ${{ secrets.GITHUB_TOKEN }}
